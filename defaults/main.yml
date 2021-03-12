@@ -1,2 +1,17 @@
 ---
 # defaults file for wordpress
+
+# Package for Wordpress in tasks/install_packages.yml
+package_name:
+    - apache2
+    - mysql-server
+    - php7.0-common
+    - php7.0-mysql
+    - libapache2-mod-php7.0
+    - python-mysqldb
+    - wget
+
+# Variable mysql
+mysql_db: "wordpress_db"
+mysql_user: "user_wp"
+mysql_password: "password_db"

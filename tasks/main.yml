@@ -3,3 +3,7 @@
 #
 - name: "[WORDPRESS] - install package + start des services"
   include: install_packages.yml
+
+- name: "[WORDPRESS] - install db"
+  include: install_db.yml
+
