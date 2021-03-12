@@ -1,31 +1,5 @@
 ---
 # tasks file for wordpress
 #
-
-- name: "[WORDPRESS] - update cache"
-  apt:
-    update_cache: yes
-  become: yes
-
-- name: "[WORDPRESS] - install LAMP"
-  apt:
-    name: "{{ item }}"
-    state: present
-  become: yes
-  with_items:
-    - apache2
-    - mysql-server
-    - php7.0-common
-    - php7.0-mysql
-    - libapache2-mod-php7.0
-    - python-mysqldb
-    - wget
-
-- name: "[WORDPRESS] - start services"
-  service:
-    name: "{{ item }}"
-    state: started
-  become: yes
-  with_items:
-    - apache2
-    - mysql
+- name: "[WORDPRESS] - install package + start des services"
+  include: install_packages.yml
