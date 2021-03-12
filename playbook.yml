@@ -1,0 +1,5 @@
+- name: "[WORDPRESS]"
+  hosts: wordpress
+  become: yes
+  roles:
+    - wordpress
