@@ -15,3 +15,7 @@ package_name:
 mysql_db: "wordpress_db"
 mysql_user: "user_wp"
 mysql_password: "password_db"
+
+# Wordpress
+
+wordpress_source: "https://wordpress.org/latest.tar.gz"
